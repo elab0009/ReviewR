@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta http-equiv="" content="default-src 'self' data: gap:  ''; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content: ;"/>
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="msapplication-tap-highlight" content="no"/>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="css/ratchet.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>ReviewR</title>
+</head>
+
+<body>
+    <header class="bar bar-nav"> <a class="btn btn-link btn-nav pull-right" href="#Addmodal">
+                Add Review
+                <span class="icon icon-compose"></span>
+            </a>
+        <h1 class="title">ReviewR</h1> </header>
+    <div class="content">
+        <ul class="table-view" id="Reviews">
+                <!--li class="table-view-cell">
+                    <a class="navigate-right" href="#rmvmodal"> 
+                       <img class="media-object pull-left" src="img/placeholder.jpg" alt="">
+                        <div class="media-body"> 
+                           <span class="name">Name</span>
+                            <div class="stars review-list"> 
+                                <span class="star">&nbsp;</span> 
+                                <span class="star">&nbsp;</span> 
+                                <span class="star">&nbsp;</span> 
+                                <span class="star">&nbsp;</span> 
+                                <span class="star">&nbsp;</span> 
+                            </div>
+                        </div>
+                    </a>
+                </li-->
+        </ul>
+    </div>
+    <!-- ADD MODAL -->
+    <div id="Addmodal" class="modal">
+        <header class="bar bar-nav">
+            <a id="closebutton" class="icon icon-close pull-right" href="#Addmodal"></a>
+            <h1 class="title">Add Review</h1> </header>
+        <div class="content">
+            <div class="content-padded">
+                <form class="input-group">
+                    <div class="input-row">
+                        <label>Item</label>
+                        <input id="itemName" type="text" placeholder="item" /> </div>
+                    <div id="ratingRow" class="input-row">
+                        <label>Rating</label>
+                        <p class="stars review-listRating"> <span class="star">&nbsp;</span> <span class="star">&nbsp;</span> <span class="star">&nbsp;</span> <span class="star">&nbsp;</span> <span class="star">&nbsp;</span> </p>
+                    </div>
+                </form>
+                <p class="content-padded">
+                    <img id="img" src="img/placeholder.jpg" class="hidden center" alt="">
+                    <button id="takeImg" class="btn btn-positive btn-block btn-outlined"> 
+                       <span class="icon icon-play"></span> Take Image
+                        <!-- dispatch click to the close button -->
+                    </button>
+                    <button id="canItem" class="btn btn-negative btn-block btn-outlined"> <span class="icon icon-close"></span> Cancel
+                        <!-- dispatch click to the close button -->
+                    </button>
+                    <button id="saveItem" class="btn btn-primary btn-block btn-outlined"> <span class="icon icon-check"></span> Save
+                        <!-- process the info then dispatch click to the close button -->
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- REMOVE MODAL -->
+    <div id="rmvmodal" class="modal">
+        <header class="bar bar-nav">
+            <a id="closebuttonM" class="icon icon-close pull-right" href="#rmvmodal"></a>
+            <h1 class="title">ReviewR</h1> </header>
+        <div class="content">
+            <div class="content-padded">
+                <div class="center"> <img id="pic" src="img/placeholder.jpg" alt="Image"> <span id="rmvname">ItemName</span>
+                    <br> <span>rating</span>
+                    <div class="stars review-listImg"> <span class="star">&nbsp;</span> <span class="star">&nbsp;</span> <span class="star">&nbsp;</span> <span class="star">&nbsp;</span> <span class="star">&nbsp;</span> </div>
+                </div>
+                <p class="content-padded">
+                    <button id="deleteItem" class="btn btn-negative btn-block btn-outlined"> <span class="icon icon-close"></span> Delete
+                        <!-- dispatch click to the close button -->
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- include the compiled Ratchet JS -->
+    <script src="js/ratchet.min.js"></script>
+    <script src="js/index.js"></script>
+    
+</body>
+
+</html>
